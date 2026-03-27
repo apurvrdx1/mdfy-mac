@@ -14,11 +14,14 @@ __pycache__/
 venv/
 env/
 
-# Local notes (not for public repo)
+# Local notes and archivist (not for public repo)
 notes/
+archivist.config.toon
+documentation_notes
 
 # Editor
 .vscode/
 .idea/
 *.swp
 *.swo
+documentation_notes
