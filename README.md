@@ -51,7 +51,7 @@ t2 replaces all embedded media payloads with:
 ## Quick start
 
 ```bash
-git clone https://github.com/apurvray/mdfy-mac.git
+git clone https://github.com/apurvrdx1/mdfy-mac.git
 cd mdfy-mac
 ./install.sh
 ```
