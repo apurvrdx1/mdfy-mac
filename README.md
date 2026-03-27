@@ -111,6 +111,16 @@ Set these in `~/.zshrc` or at the top of your Automator Quick Action script.
 
 ---
 
+## Support
+
+If this project saved you time or tokens, you can support its continued development here:
+
+<a href="https://buymeacoffee.com/apurvrdx" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
+</a>
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
