@@ -1,0 +1,422 @@
+[
+  {
+    "pdf": "1-academic-twocolumn",
+    "pdf_bytes": 168937,
+    "timing": {
+      "raw_secs": 0,
+      "t1_secs": 3,
+      "t2_secs": 17
+    },
+    "raw": {
+      "bytes": 50508,
+      "chars": 50163,
+      "tokens": 12540,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 45.5,
+        "total_lines": 1346
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 49349,
+      "chars": 49004,
+      "tokens": 12251,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 44.5,
+        "total_lines": 1302
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+2.3%"
+    },
+    "t2": {
+      "bytes": 48371,
+      "chars": 48360,
+      "tokens": 12090,
+      "structure": {
+        "headings": 14,
+        "tables": 0,
+        "list_items": 63
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 341.4,
+        "total_lines": 219
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 0,
+      "token_reduction_vs_raw": "+3.6%"
+    }
+  },
+  {
+    "pdf": "2-apple-annual-report",
+    "pdf_bytes": 963934,
+    "timing": {
+      "raw_secs": 7,
+      "t1_secs": 17,
+      "t2_secs": 78
+    },
+    "raw": {
+      "bytes": 441166,
+      "chars": 437804,
+      "tokens": 109451,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 7
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 62.4,
+        "total_lines": 11406
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 435666,
+      "chars": 432305,
+      "tokens": 108076,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 7
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 61.8,
+        "total_lines": 10794
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+1.3%"
+    },
+    "t2": {
+      "bytes": 487374,
+      "chars": 486998,
+      "tokens": 121749,
+      "structure": {
+        "headings": 312,
+        "tables": 645,
+        "list_items": 188
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 256.9,
+        "total_lines": 2962
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 4,
+      "token_reduction_vs_raw": "-11.2%"
+    }
+  },
+  {
+    "pdf": "3-rpi5-product-brief",
+    "pdf_bytes": 1107784,
+    "timing": {
+      "raw_secs": 0,
+      "t1_secs": 3,
+      "t2_secs": 14
+    },
+    "raw": {
+      "bytes": 6279,
+      "chars": 6193,
+      "tokens": 1548,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 27.0,
+        "total_lines": 400
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 6187,
+      "chars": 6101,
+      "tokens": 1525,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 26.7,
+        "total_lines": 385
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+1.5%"
+    },
+    "t2": {
+      "bytes": 5872,
+      "chars": 5858,
+      "tokens": 1464,
+      "structure": {
+        "headings": 8,
+        "tables": 0,
+        "list_items": 25
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 41.2,
+        "total_lines": 250
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 5,
+      "token_reduction_vs_raw": "+5.4%"
+    }
+  },
+  {
+    "pdf": "4-stripe-payment-methods-guide",
+    "pdf_bytes": 616423,
+    "timing": {
+      "raw_secs": 2,
+      "t1_secs": 3,
+      "t2_secs": 43
+    },
+    "raw": {
+      "bytes": 48845,
+      "chars": 48655,
+      "tokens": 12163,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 29.8,
+        "total_lines": 2988
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 47738,
+      "chars": 47548,
+      "tokens": 11887,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 29.3,
+        "total_lines": 2803
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+2.3%"
+    },
+    "t2": {
+      "bytes": 49178,
+      "chars": 49132,
+      "tokens": 12283,
+      "structure": {
+        "headings": 185,
+        "tables": 98,
+        "list_items": 4
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 81.9,
+        "total_lines": 1080
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 27,
+      "token_reduction_vs_raw": "-1.0%"
+    }
+  },
+  {
+    "pdf": "5-neurips2024-slides",
+    "pdf_bytes": 2612510,
+    "timing": {
+      "raw_secs": 0,
+      "t1_secs": 1,
+      "t2_secs": 30
+    },
+    "raw": {
+      "bytes": 4651,
+      "chars": 3998,
+      "tokens": 999,
+      "structure": {
+        "headings": 1,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 27.8,
+        "total_lines": 269
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 4629,
+      "chars": 3976,
+      "tokens": 994,
+      "structure": {
+        "headings": 1,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 27.7,
+        "total_lines": 268
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+0.5%"
+    },
+    "t2": {
+      "bytes": 5911,
+      "chars": 5519,
+      "tokens": 1379,
+      "structure": {
+        "headings": 20,
+        "tables": 0,
+        "list_items": 15
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 29.8,
+        "total_lines": 329
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 20,
+      "token_reduction_vs_raw": "-38.0%"
+    }
+  },
+  {
+    "pdf": "6-cooley-saas-agreement",
+    "pdf_bytes": 353374,
+    "timing": {
+      "raw_secs": 1,
+      "t1_secs": 4,
+      "t2_secs": 15
+    },
+    "raw": {
+      "bytes": 87426,
+      "chars": 86982,
+      "tokens": 21745,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 81.9,
+        "total_lines": 1592
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 85951,
+      "chars": 85507,
+      "tokens": 21376,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 80.8,
+        "total_lines": 1419
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+1.7%"
+    },
+    "t2": {
+      "bytes": 85438,
+      "chars": 85438,
+      "tokens": 21359,
+      "structure": {
+        "headings": 16,
+        "tables": 0,
+        "list_items": 104
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 385.0,
+        "total_lines": 360
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 22,
+      "token_reduction_vs_raw": "+1.8%"
+    }
+  },
+  {
+    "pdf": "7-nasa-spinoff-2024",
+    "pdf_bytes": 21541963,
+    "timing": {
+      "raw_secs": 2,
+      "t1_secs": 3,
+      "t2_secs": 60
+    },
+    "raw": {
+      "bytes": 12376,
+      "chars": 12312,
+      "tokens": 3078,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 32.5,
+        "total_lines": 531
+      },
+      "data_uris_remaining": 0
+    },
+    "t1": {
+      "bytes": 12190,
+      "chars": 12126,
+      "tokens": 3031,
+      "structure": {
+        "headings": 0,
+        "tables": 0,
+        "list_items": 0
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 32.0,
+        "total_lines": 530
+      },
+      "data_uris_remaining": 0,
+      "token_reduction_vs_raw": "+1.5%"
+    },
+    "t2": {
+      "bytes": 17207,
+      "chars": 17202,
+      "tokens": 4300,
+      "structure": {
+        "headings": 26,
+        "tables": 41,
+        "list_items": 3
+      },
+      "noise": {
+        "artifact_lines": 0,
+        "avg_line_length": 68.7,
+        "total_lines": 445
+      },
+      "data_uris_remaining": 0,
+      "media_placeholders": 45,
+      "token_reduction_vs_raw": "-39.7%"
+    }
+  }
+]

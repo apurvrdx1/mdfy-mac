@@ -1,0 +1,57 @@
+[
+  {
+    "pdf": "1-academic-twocolumn",
+    "pdf_bytes": 168937,
+    "raw_secs": 0,
+    "t1_secs": 3,
+    "t2_secs": 17
+  }
+,
+  {
+    "pdf": "2-apple-annual-report",
+    "pdf_bytes": 963934,
+    "raw_secs": 7,
+    "t1_secs": 17,
+    "t2_secs": 78
+  }
+,
+  {
+    "pdf": "3-rpi5-product-brief",
+    "pdf_bytes": 1107784,
+    "raw_secs": 0,
+    "t1_secs": 3,
+    "t2_secs": 14
+  }
+,
+  {
+    "pdf": "4-stripe-payment-methods-guide",
+    "pdf_bytes": 616423,
+    "raw_secs": 2,
+    "t1_secs": 3,
+    "t2_secs": 43
+  }
+,
+  {
+    "pdf": "5-neurips2024-slides",
+    "pdf_bytes": 2612510,
+    "raw_secs": 0,
+    "t1_secs": 1,
+    "t2_secs": 30
+  }
+,
+  {
+    "pdf": "6-cooley-saas-agreement",
+    "pdf_bytes": 353374,
+    "raw_secs": 1,
+    "t1_secs": 4,
+    "t2_secs": 15
+  }
+,
+  {
+    "pdf": "7-nasa-spinoff-2024",
+    "pdf_bytes": 21541963,
+    "raw_secs": 2,
+    "t1_secs": 3,
+    "t2_secs": 60
+  }
+]

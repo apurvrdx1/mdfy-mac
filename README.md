@@ -15,6 +15,24 @@ Uploading raw PDFs to LLMs is wasteful. Embedded images, base64 data blobs, and 
 
 ---
 
+## Benchmark
+
+Tested across 7 PDF types: academic paper, financial report, product brief, developer guide, slide deck, legal contract, and magazine.
+
+| | t1 (MarkItDown) | t2 (Docling) |
+|---|---|---|
+| **Speed** | 1–17s | 14–78s |
+| **Headings extracted** | 0 across all 7 PDFs | 8–312 per PDF |
+| **Tables extracted** | 0 across all 7 PDFs | Up to 645 per PDF |
+| **Media stripped** | No | Yes — 0 data URIs remaining in all 7 |
+| **Token count vs raw** | −1 to −2% (negligible) | −5% to +40% depending on content |
+
+The token increase in t2 is not waste — it's structure. Docling reconstructs headings, tables, and lists that raw text extraction misses entirely. For a 21MB NASA magazine, pdfminer extracts 3KB of text; t2 recovers the full document structure plus strips 45 embedded images.
+
+Full results, per-PDF notes, and methodology: [benchmark/README.md](benchmark/README.md)
+
+---
+
 ## t1 vs t2
 
 | | mdfy-t1 | mdfy-t2 |

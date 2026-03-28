@@ -14,6 +14,9 @@ __pycache__/
 venv/
 env/
 
+# Test files and local notes (not for public repo)
+test-pdfs/
+
 # Local notes and archivist (not for public repo)
 notes/
 archivist.config.toon

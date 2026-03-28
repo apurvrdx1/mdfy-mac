@@ -1,0 +1,249 @@
+NeurIPS 2024 LLM-Merging
+A Model Merging Method
+
+abc team
+
+Jisheng Fang
+asdfqwer2015@163.com
+
+Hao Mo
+sunshineinautumn@163.com
+
+Qiang Gao
+gq15035177217@gmail.com
+
+01 Introduction
+
+02 Model Selection
+
+03 Model Merging
+
+04 Conclusions and Outlook
+
+05 Q&A
+
+content
+
+Introduction
+
+Competition Goal
+
+Training high-performing large language models (LLMs) from scratch is a notoriously 
+
+expensive and difficult task, costing hundreds of millions of dollars in compute alone. 
+
+These pretrained LLMs, however, can cheaply and easily be adapted to new tasks via 
+
+fine-tuning, leading to a proliferation of models that suit specific use cases. Recent 
+
+work has shown that specialized fine-tuned models can be rapidly merged to 
+
+combine capabilities and generalize to new skills.
+
+Current Methods 
+
+• Parameter Averaging
+
+• Model Stacking
+
+• Model Routing
+
+• MoE-based merging
+
+• Model Zipping
+
+Model Selection
+
+Base Model Selection
+
+• meta-llama/Meta-Llama-3-8B-Instruct
+
+• broad knowledge
+
+•
+
+•
+
+skilled at summarizing
+
+ecologically rich
+
+• microsoft/Phi-3-small-8k-instruct
+
+• small and fast
+
+• skilled at reasoning
+
+Base Model Selection
+
+• Task types by knowledge area
+
+• assessing each fine-tuned model’s GPU memory 
+
+usage and accuracy by lm-evaluation-harness and 
+
+custom datasets
+
+Model Merging
+
+Model Merging
+
+Weights Merging
+
+Lower VRAM 
+requirements to 
+support a greater 
+number of models
+
+Router
+
+Staged Response
+
+Determine model 
+selection based on 
+sample analysis
+
+Harness the distinct 
+advantages of multiple 
+base models
+
+Weights Merging
+
+1. Compresses weights for layers (excluding the lm_head and embedding layers)
+
+2. Applies RSVD
+
+3. Connects parameter averaging and model routing
+
+Weights Merging
+
+Algorithm: Weight compression for a layer in models
+
+Algorithm: Inference for Compressed Model Layer
+
+Input:
+
+𝑊 = 𝑊(cid:2869), 𝑊(cid:2870), … , 𝑊(cid:3015)
+
+𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠_𝑟𝑎𝑡𝑒
+
+Output:
+
+Input:
+
+𝑥
+
+𝑏𝑖𝑎𝑠 # Uncompressed bias
+
+𝑠𝑐𝑎𝑙𝑒𝑠  =   {𝑠𝑐𝑎𝑙𝑒(cid:2869), 𝑠𝑐𝑎𝑙𝑒(cid:2870), … , 𝑠𝑐𝑎𝑙𝑒(cid:3015)}
+
+𝑠𝑐𝑎𝑙𝑒𝑠  =   {𝑠𝑐𝑎𝑙𝑒(cid:2869), 𝑠𝑐𝑎𝑙𝑒(cid:2870), … , 𝑠𝑐𝑎𝑙𝑒(cid:3015)}
+
+W(cid:3028)(cid:3049)(cid:3034)
+
+W(cid:3028)(cid:3049)(cid:3034)
+
+𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠𝑒𝑑_𝑑𝑖𝑓𝑓 = {𝑈(cid:2869), 𝑈(cid:2870), … , 𝑈(cid:3015), 𝑉(cid:2869), 𝑉(cid:2870), … , 𝑉(cid:3015)}
+
+𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠𝑒𝑑_𝑑𝑖𝑓𝑓 = {𝑈(cid:2869), 𝑈(cid:2870), … , 𝑈(cid:3015), 𝑉(cid:2869), 𝑉(cid:2870), … , 𝑉(cid:3015)}
+
+Output:
+
+1.
+
+For each weight matrix 𝑊(cid:3036)   ∈  𝑊:
+
+𝑦 = {𝑦(cid:2869), 𝑦(cid:2870), … , 𝑦(cid:3015)}
+
+𝑠𝑐𝑎𝑙𝑒(cid:3036)   =   𝑊(cid:3036)
+
+𝑊(cid:3553)(cid:3036) =  
+
+(cid:3024)(cid:3284)
+(cid:3046)(cid:3030)(cid:3028)(cid:3039)(cid:3032)(cid:3284)
+
+# Normalize weight matrix 𝑊(cid:3036).
+
+2. 𝑊(cid:3028)(cid:3049)   =
+
+(cid:2869)
+(cid:3015)
+
+ ∑ 𝑊(cid:3553)(cid:3036)
+
+3. For each normalized weight matrix 𝑊(cid:3553)(cid:3036):
+
+𝑈(cid:3036), 𝑉(cid:3036)   =  𝑅𝑆𝑉𝐷(𝑊(cid:3553)(cid:3036)   −   𝑤(cid:3028)(cid:3049)(cid:3034), 𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠_𝑟𝑎𝑡𝑒)
+
+4. Return 𝑠𝑐𝑎𝑙𝑒𝑠, 𝑤(cid:3028)(cid:3049)(cid:3034), 𝑐𝑜𝑚𝑝𝑟𝑒𝑠𝑠𝑒𝑑_𝑑𝑖𝑓𝑓
+
+1. 𝑦(cid:3036)   =  𝑙𝑖𝑛𝑒𝑎𝑟(𝑥, 𝑤(cid:3028)(cid:3049)(cid:3034))   +  𝑙𝑖𝑛𝑒𝑎𝑟(𝑙𝑖𝑛𝑒𝑎𝑟(𝑥, 𝑉(cid:3036)), 𝑈(cid:3036))   ∗  𝑠𝑐𝑎𝑙𝑒(cid:3036)
+
+2. If bias is not null:
+
+𝑦(cid:3036)   +=  𝑏𝑖𝑎𝑠(cid:3036)
+
+3. Return y  # Return the final output.
+
+Weights Merging
+
+1. 95% compression rate
+
+2. Phi3-Small and three fully fine-tuned Llama3 8B models 
+
+Router
+
+1. Embedding based
+
+2.
+
+LLM instead of PLM
+
+3. Alignment
+
+Router
+
+Alignment
+
+‘’’{input}
+
+Let’s think about what task these questions belong to. These questions belong to the 
+
+field of’’’
+
+Staged Response
+
+Accuracy and Clarity
+
+2-agents, model stacking
+
+Thinker: Phi3-small, guided COT
+
+Formatter: llama3 8B
+
+Conclusions and 
+Outlook
+
+Conclusions and Outlook
+
+We ultimately achieved first place with a score of 0.46
+
+The Method with second version of Staged Response gets a higher 
+score of 0.50
+
+Q&A
+
+Q&A
+
+If you have any questions, please feel free to email us.
+
+Jisheng Fang
+asdfqwer2015@163.com
+Hao Mo
+sunshineinautumn@163.com
+Qiang Gao
+gq15035177217@gmail.com
+
+THANKS
+
+
